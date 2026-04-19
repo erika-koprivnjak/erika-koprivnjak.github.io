@@ -1,0 +1,28 @@
+<html>
+<HEAD>
+<TITLE> vježba 4</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+var danas= new Date();
+var dan=danas.getDate(); 
+var mjesec=danas.getMonth();
+mjesec=mjesec+1;
+var godina=danas.getFullYear();
+var datum=dan+"/"+mjesec+"/"+godina;
+var sat=danas.getHours();
+var min=danas.getMinutes();
+var sek=danas.getSeconds();
+var vrijeme=sat+":"+min+":"+sek;
+</SCRIPT>
+</HEAD>
+<body BGCOLOR="black" text="red">
+Današnji datum je;
+<SCRIPT LANGUAGE="JavaScript">
+document.write(datum);
+</SCRIPT>
+<br>
+Trenutno vrijeme je:
+<SCRIPT LANGUAGE="JavaScript">
+document.write("<h2 style='text-align:center;'><B><I>"+vrijeme+"</h2></B></I>");
+</SCRIPT>
+</body>
+</html>
