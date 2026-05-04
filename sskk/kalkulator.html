@@ -1,0 +1,42 @@
+<html>
+<head>
+<TITLE> Kalkulator </TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+function SumirajPolja()
+{
+var broj1=parseFloat(window.document.mojaforma.polje1.value);
+var broj2=parseFloat(window.document.mojaforma.polje2.value);
+var suma=broj1+broj2;
+window.document.mojaforma.rezultat.value=suma;
+}
+
+function PomnoziPolja()
+{
+var broj1=parseFloat(window.document.mojaforma.polje1.value);
+var broj2=parseFloat(window.document.mojaforma.polje2.value);
+var suma=broj1*broj2;
+window.document.mojaforma.rezultat.value=suma;
+}
+
+function PodijeliPolja()
+{
+var broj1=parseFloat(window.document.mojaforma.polje1.value);
+var broj2=parseFloat(window.document.mojaforma.polje2.value);
+var suma=broj1/broj2;
+window.document.mojaforma.rezultat.value=suma;
+}
+
+</SCRIPT>
+</head>
+
+<body BGCOLOR="black" text="red">
+<FORM name="mojaforma">
+Broj 1:<INPUT TYPE="text" NAME="polje1"><br>
+Broj 2:<INPUT TYPE="text" NAME="polje2"><br>
+Rezultat:<INPUT TYPE="text" NAME="rezultat"><br>
+<a HREF="#" onClick="SumirajPolja();"> Zbroji ih!</a>
+<a HREF="#" onClick="PomnoziPolja();"> Pomnozi ih!</a>
+<a HREF="#" onClick="PodijeliPolja();"> Podijeli ih!</a>
+</FORM>
+</body>
+</html>

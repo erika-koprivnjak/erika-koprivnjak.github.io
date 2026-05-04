@@ -1,0 +1,47 @@
+<html>
+<head>
+<TITLE>Kviz - mačke</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+function rezkviza() {
+    var tocnih = 0;
+
+    if (document.mojaforma.pitanje1.checked == true)
+        tocnih = tocnih + 1;
+    else
+        document.mojaforma.pitanje1.checked = true;
+
+    if (document.mojaforma.pitanje2.checked == true)
+        tocnih = tocnih + 1;
+    else
+        document.mojaforma.pitanje2.checked = true;
+
+    if (document.mojaforma.pitanje3.checked == false)
+        tocnih = tocnih + 1;
+    else
+        document.mojaforma.pitanje3.checked = false;
+
+    if (document.mojaforma.pitanje4.checked == true)
+        tocnih = tocnih + 1;
+    else
+        document.mojaforma.pitanje4.checked = true;
+
+    alert("Imate " + tocnih + " točnih odgovora! Pogledajte točne rezultate.");
+}
+</SCRIPT>
+</head>
+
+<body bgcolor="black" text="red">
+<H2>Odgovorite na sljedeća pitanja o mačkama:</H2>
+
+<FORM NAME="mojaforma">
+<INPUT TYPE="checkbox" NAME="pitanje1"> Mačke su sisavci <BR>
+<INPUT TYPE="checkbox" NAME="pitanje2"> Mačke predu <BR>
+<INPUT TYPE="checkbox" NAME="pitanje3"> Mačke mogu letjeti <BR>
+<INPUT TYPE="checkbox" NAME="pitanje4"> Mačke imaju brkove <BR>
+
+<P>
+<INPUT TYPE="button" VALUE="Rezultati kviza" onClick="rezkviza();">
+</FORM>
+
+</body>
+</html>
