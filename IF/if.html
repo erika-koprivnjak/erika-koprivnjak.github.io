@@ -1,0 +1,31 @@
+<html>
+<head>
+<TITLE> Interaktivna forma</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+function poruka()
+{
+if (window.document.mojaforma.godine[0].checked==true || window.document.mojaforma.godine[4].checked==true)
+{alert("Bravo!");}
+if (window.document.mojaforma.godine[1].checked==true || 
+window.document.mojaforma.godine[2].checked==true ||
+window.document.mojaforma.godine[3].checked==true)
+{alert("Odlično!");}
+}
+</SCRIPT>
+</head>
+<body bgcolor="black" text="red">
+<form name="mojaforma" OnClick="poruka();">
+Koliko imate godina?<br>
+<INPUT TYPE="radio" name="godine">
+Između 0 i 3.<br>
+<INPUT TYPE="radio" name="godine">
+Između 4 i 8.<br>
+<INPUT TYPE="radio" name="godine">
+Između 9 i 13.<br>
+<INPUT TYPE="radio" name="godine">
+Između 14 i 19.<br>
+<INPUT TYPE="radio" name="godine">
+Više od 20.<br>
+</form>
+</body>
+</html>

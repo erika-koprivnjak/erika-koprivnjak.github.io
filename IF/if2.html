@@ -1,0 +1,38 @@
+<html>
+<head>
+<TITLE> Interaktivna forma 2</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+function savjet()
+{
+var inspol=window.document.mojaforma.spol.selectedIndex;
+var izaberispol=window.document.mojaforma.spol.options[inspol].text;
+
+var inhrana=window.document.mojaforma.hrana.selectedIndex;
+var izaberihranu=window.document.mojaforma.hrana.options[inhrana].text;
+{alert(" Vi ste " + izaberispol + " koji/a voli " + izaberihranu + "." );}
+}
+</SCRIPT>
+</head>
+<body bgcolor="black" text="red">
+<FORM name="mojaforma">
+ Kojeg ste spola?<br>
+<SELECT NAME="spol" Size="1">
+<OPTION> Žena
+<OPTION> Muškarac
+<OPTION> Ostalo
+</SELECT>
+<P>
+Što volite jesti?<br>
+<SELECT NAME="hrana" Size="3">
+<OPTION> Ledeni vjetar
+<OPTION> Mađaricu
+<OPTION> Rum kuglice
+<OPTION> Rafaelo kuglice
+<OPTION> Breskvice
+<OPTION> Štrukle
+<OPTION> Ništa od ponuđenog
+</SELECT> <P>
+<INPUT TYPE="button" VALUE="Savjet" onClick="savjet();"
+</FORM>
+</body>
+</html>

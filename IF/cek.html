@@ -1,0 +1,29 @@
+<html>
+<head>
+<TITLE> Čekiranje </TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+function cekirajsve()
+{
+for (var i=0; i < window.document.mojaforma.elements.length; i++)
+{window.document.mojaforma.elements[i].checked=true;}
+}
+</SCRIPT>
+</head>
+<body bgcolor="black" text="red">
+Koju vam je najdraža životinja?
+<FORM name="mojaforma">
+<INPUT TYPE="checkbox"> Pas<br>
+<INPUT TYPE="checkbox"> Vuk<br>
+<INPUT TYPE="checkbox"> Jaguar<br>
+<INPUT TYPE="checkbox"> Konj<br>
+<INPUT TYPE="checkbox"> Tigar<br>
+<INPUT TYPE="checkbox"> Mačka<br>
+<INPUT TYPE="checkbox"> Zmija<br>
+<INPUT TYPE="checkbox"> Lav<br>
+<INPUT TYPE="checkbox"> Hijena<br>
+<INPUT TYPE="checkbox"> Zebra<br>
+<P>
+<INPUT TYPE="button" VALUE="Cekiraj sve" onClick="cekirajsve();">
+</FORM>
+</body>
+</html>

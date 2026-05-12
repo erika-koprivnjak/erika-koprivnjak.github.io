@@ -1,0 +1,37 @@
+<html>
+<head>
+<TITLE> petlja u petlji </TITLE>
+</head>
+
+<body bgcolor="black" text="red">
+
+<SCRIPT LANGUAGE="JavaScript">
+
+var redovi = prompt("Unesite broj redaka (max 4):");
+var stupci = prompt("Unesite broj stupaca (max 7):");
+
+if(redovi > 4)
+{
+    redovi = 4;
+}
+
+if(stupci > 7)
+{
+    stupci = 7;
+}
+
+
+for(var i=0; i<redovi; i++)
+{
+    for(var j=0; j<stupci; j++)
+    {
+        window.document.write("Mačka ");
+    }
+
+    window.document.write("<br>");
+}
+
+</SCRIPT>
+
+</body>
+</html>
