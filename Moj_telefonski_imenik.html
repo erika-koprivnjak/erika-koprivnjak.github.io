@@ -1,0 +1,152 @@
+<html>
+<head>
+<TITLE>Asocijativno polje - vježba 11</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+
+
+var telBrojevi = new Array();
+telBrojevi["Sanja Horvat"] = "555-9999";
+telBrojevi["Nikolina Miketic"] = "123-4567";
+telBrojevi["Ana Kovac"] = "444-6666";
+telBrojevi["Marko Ptulj"] = "111-2222";
+telBrojevi["Petra Novak"] = "365-3456";
+telBrojevi["Maja Juric"] = "485-7890";
+telBrojevi["Tomislav Babic"] = "958-2345";
+telBrojevi["Karla Vukovic"] = "333-6789";
+
+var mobBrojevi = new Array();
+mobBrojevi["Sanja Horvat"] = "098-555-111";
+mobBrojevi["Nikolina Miketic"] = "099-123-456";
+mobBrojevi["Ana Kovac"] = "097-444-222";
+mobBrojevi["Marko Ptulj"] = "091-111-333";
+mobBrojevi["Petra Novak"] = "095 456-789";
+mobBrojevi["Maja Juric"] = "091 567-890";
+mobBrojevi["Tomislav Babic"] = "092 678-901";
+mobBrojevi["Karla Vukovic"] = "093 789-012";
+
+var boje = new Array();
+boje["Sanja Horvat"] = "#842DCE";
+boje["Nikolina Miketic"] = "#F9A7B0";
+boje["Ana Kovac"] = "#F76541";
+boje["Marko Ptulj"] = "#52F3FF";
+boje["Petra Novak"] = "#F87431";
+boje["Maja Juric"] = "#95B9C7";
+boje["Tomislav Babic"] = "#C8BBBE";
+boje["Karla Vukovic"] = "#B93B8F";
+
+var tekstovi = new Array();
+tekstovi["Ponedjeljak"] = "Ponedjeljak je prvi radni dan.";
+tekstovi["Utorak"] = "Utorak je drugi dan u tjednu.";
+tekstovi["Srijeda"] = "Srijeda je sredina tjedna.";
+tekstovi["Četvrtak"] = "Četvrtak znači još malo do vikenda.";
+tekstovi["Petak"] = "Petak je zadnji radni dan!";
+tekstovi["Subota"] = "Subota je dan za odmor.";
+tekstovi["Nedjelja"] = "Nedjelja je kraj vikenda.";
+
+
+function promjeniBojuForme(odabranoIme) {
+    var boja = boje[odabranoIme];
+    document.getElementById("prvaForma").style.backgroundColor = boja;
+}
+
+function prikaziBrojeve(odabranoIme) {
+    var tel = telBrojevi[odabranoIme];
+    var mob = mobBrojevi[odabranoIme];
+    document.mojaforma.tel_broj.value = tel;
+    document.mojaforma.mob_broj.value = mob;
+}
+
+
+function prikaziTekst(odabraniDan) {
+    var tekst = tekstovi[odabraniDan];
+    document.drugaforma.tekstualno_polje.value = tekst;
+}
+
+</SCRIPT>
+
+<style>
+body{
+background-image:url('pic.jpg');
+background-size:cover;
+}
+#prvaForma {
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: 10px 10px 10px red;
+    -moz-box-shadow: 10px 10px 10px red;
+    -webkit-box-shadow: 10px 10px 10px red;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-top: 200px;
+    width: 400px;
+}
+
+#drugaForma {
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: 10px 10px 10px red;
+    -moz-box-shadow: 10px 10px 10px red;
+    -webkit-box-shadow: 10px 10px 10px red;
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 400px;
+}
+
+textarea {
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: 5px 5px 10px #000;
+    -moz-box-shadow: 5px 5px 10px #000;
+    -webkit-box-shadow: 5px 5px 10px #000;
+}
+</style>
+
+</head>
+
+<body BGCOLOR="black" text="red">
+<center>
+
+
+<form NAME="mojaforma" id="prvaForma">
+Odaberi ime:
+<SELECT onChange="prikaziBrojeve(this.options[this.selectedIndex].value); promjeniBojuForme(this.options[this.selectedIndex].value);">
+<OPTION VALUE=""> Odaberite ime
+<OPTION VALUE="Sanja Horvat"> Sanja 
+<OPTION VALUE="Nikolina Miketic"> Nikolina 
+<OPTION VALUE="Ana Kovac"> Ana 
+<OPTION VALUE="Marko Ptulj"> Marko 
+<OPTION VALUE="Petra Novak"> Petra 
+<OPTION VALUE="Maja Juric"> Maja 
+<OPTION VALUE="Tomislav Babic"> Tomislav 
+<OPTION VALUE="Karla Vukovic"> Karla 
+</SELECT>
+<p>
+Tel. broj:
+<INPUT TYPE="text" NAME="tel_broj" value="" size="20">
+<p>
+Mob. broj:
+<INPUT TYPE="text" NAME="mob_broj" value="" size="20">
+</form>
+
+
+<form NAME="drugaforma" id="drugaForma">
+Odaberi dan:
+<SELECT onChange="prikaziTekst(this.options[this.selectedIndex].value);">
+<OPTION VALUE=""> Odaberite dan
+<OPTION VALUE="Ponedjeljak"> Ponedjeljak
+<OPTION VALUE="Utorak"> Utorak
+<OPTION VALUE="Srijeda"> Srijeda
+<OPTION VALUE="Četvrtak"> Četvrtak
+<OPTION VALUE="Petak"> Petak
+<OPTION VALUE="Subota"> Subota
+<OPTION VALUE="Nedjelja"> Nedjelja
+</SELECT>
+<p>
+<textarea NAME="tekstualno_polje" rows="4" cols="40"></textarea>
+</form>
+</center>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<html>
+<head>
+<TITLE> Asosijativno polje2 </TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+
+var telime1=new Array();
+telime1["Marko"]="111-2222";
+telime1["Sanja"]="555-9999";
+telime1["Marija"]="444-6666";
+telime1["Brankica"]="777-3333";
+telime1["Jura"]="555-8888";
+telime1["Ivica"]="446-7777";
+
+var telime2=new Array();
+telime2["Marko"]="1-452222";
+telime2["Sanja"]="539-9999";
+telime2["Marija"]="4-996666";
+telime2["Brankica"]="7-113333";
+telime2["Jura"]="5-568888";
+telime2["Ivica"]="4-697777";
+
+var telime3=new Array();
+telime3["Marko"]="111-25454";
+telime3["Sanja"]="555-9545";
+telime3["Marija"]="444-67625";
+telime3["Brankica"]="777-3789";
+telime3["Jura"]="555-87764";
+telime3["Ivica"]="446-76796";
+
+var telime4=new Array();
+telime4["Marko"]="111-22443";
+telime4["Sanja"]="524-99459";
+telime4["Marija"]="466-6463";
+telime4["Brankica"]="766-35873";
+telime4["Jura"]="545-4588";
+telime4["Ivica"]="412-787667";
+
+function pokazibroj(telefonimenik,ulaz)
+{
+
+var broj=telefonimenik[ulaz];
+window.document.mojaforma.trazenibroj.value=broj;
+}
+</SCRIPT>
+</head>
+<body BGCOLOR="black" text="red">
+<form NAME="mojaforma">
+Ime:
+<SELECT onChange="pokazibroj(telime2, this.options[this.selectedIndex].value);">
+<OPTION VALUE="Marko">Marko
+<OPTION VALUE="Sanja">Sanja
+<OPTION VALUE="Marija">Marija
+<OPTION VALUE="Brankica">Brankica
+<OPTION VALUE="Jura">Jura
+<OPTION VALUE="Ivica">Ivica
+</SELECT>
+<P>
+Broj:
+<INPUT TYPE="text" NAME="trazenibroj" value="">
+</form>
+</body>
+</html>

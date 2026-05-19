@@ -1,0 +1,32 @@
+<html>
+<head>
+<TITLE> Asosijativno polje boja </TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+
+var asocboje=new Array();
+asocboje["Sanja"]="navy";
+asocboje["Nikolina"]="red";
+asocboje["Ana"]="blue";
+asocboje["Marko"]="cyan";
+
+function promjeniboju(paleta,ulaz)
+{
+var boja=paleta[ulaz];
+window.document.bgColor=boja;
+}
+
+</SCRIPT>
+</head>
+
+<body BGCOLOR="black" text="red">
+<form NAME="moja forma">
+<SELECT onChange="promjeniboju(asocboje, this.options[this.selectedIndex].value);">
+<OPTION VALUE="">Odaberite ime
+<OPTION VALUE="Sanja"> Sanja
+<OPTION VALUE="Nikolina"> Nikolina
+<OPTION VALUE="Ana"> Ana
+<OPTION VALUE="Marko"> Marko
+</SELECT>
+</form>
+</body>
+</html>
