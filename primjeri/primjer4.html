@@ -17,7 +17,9 @@ slike[3]= new Image();
 slike[3].src="waterfall.jpg";
 
 var vrijeme;
+var vrijeme2;
 var indeks=0;
+var indeks2=0;
 function zamjenisliku()
 {
 	window.document.mojaslika.src=slike[indeks].src;
@@ -26,20 +28,33 @@ function zamjenisliku()
 	{
 		indeks=0;
 	}
-	
 	vrijeme=setTimeout("zamjenisliku();",2000);
 }
-
+function zamjenisliku2()
+{
+	window.document.mojaslika2.src=slike[indeks2].src;
+	indeks2++
+	if (indeks2 >=slike.length)
+	{
+		indeks2=0;
+	}
+	vrijeme2=setTimeout("zamjenisliku2();",500);
+}
 </SCRIPT>
-</HEAD>
+</head>
   
 <body BGCOLOR="black" text="red">
 <center>
-<img name="mojaslika" src="meow.jpg" height="700" width="500"   >
+<img name="mojaslika" src="meow.jpg" height="300">
 
 <FORM>
-<input type="button" value="Start slide show" onClick="clearTimeout(vrijeme); zamjenisliku();">
+<input type="button" value="Start slide show" onClick="clearTimeout(vrijeme);zamjenisliku();">
 <input type="button" value="Stop slide show" onClick="clearTimeout(vrijeme);">
+</FORM>
+<img name="mojaslika2" src="meow.jpg" height="300">
+<FORM>
+<input type="button" value="Start slide show" onClick="clearTimeout(vrijeme2);zamjenisliku2();">
+<input type="button" value="Stop slide show" onClick="clearTimeout(vrijeme2);">
 </FORM>
 </center>
 </body>
