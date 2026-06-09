@@ -1,0 +1,40 @@
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>vježba 14</title>
+
+<style>
+.slika {
+position: absolute;
+z-index: 1;}
+
+.slika:hover {
+z-index: 100;}
+</style>
+
+</head>
+
+<body bgcolor="black" text="red">
+
+<div id="sivi" style="position:absolute; left:50px; top:300px; width:350px; height:200px; background-color:gray;"></div>
+
+<div><img class="slika" src="1.jpg" alt="prva slika" style="left:100px; top:100px; width:200px; height:200px"></div>
+
+<div><img class="slika" src="2.jpg" alt="druga slika" style="left:150px; top:150px; width:200px; height:200px"></div>
+
+<div><img class="slika" src="3.jpg" alt="treća slika" style="left:200px; top:200px; width:200px; height:200px"></div>
+
+<div><img class="slika" src="4.jpg" alt="četvrta slika" style="left:300px; top:300px; width:200px; height:200px"></div>
+
+<div><img class="slika" src="5.jpeg" alt="peta slika" style="left:400px; top:400px; width:200px; height:200px"></div>
+
+<input type="button" value="Pomakni desno"
+onclick="window.document.getElementById('sivi').style.left =
+(parseInt(window.document.getElementById('sivi').style.left) || 0) + 20 + 'px';">
+
+<input type="button" value="Pomakni lijevo"
+onclick="window.document.getElementById('sivi').style.left =
+(parseInt(window.document.getElementById('sivi').style.left) || 0) - 20 + 'px';">
+
+</body>
+</html>
